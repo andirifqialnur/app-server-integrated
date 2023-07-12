@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shoes_app/providers/auth_providers.dart';
+import 'package:shoes_app/providers/auth_provider.dart';
 
 import '../theme/const.dart';
 import '../widgets/loading_button.dart';

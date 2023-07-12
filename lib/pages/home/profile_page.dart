@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../model/user_model.dart';
-import '../../providers/auth_providers.dart';
+import '../../providers/auth_provider.dart';
 import '../../theme/const.dart';
 
 class ProfilePage extends StatelessWidget {

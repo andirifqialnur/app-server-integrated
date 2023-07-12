@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:shoes_app/theme/const.dart';
 
 import '../model/user_model.dart';
-import '../providers/auth_providers.dart';
+import '../providers/auth_provider.dart';
 
 class EditProfilePage extends StatelessWidget {
   const EditProfilePage({super.key});

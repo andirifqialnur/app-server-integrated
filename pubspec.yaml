@@ -17,9 +17,8 @@ dependencies:
   carousel_slider: ^4.2.1
   provider: ^6.0.5
   http: ^1.0.0
-  cloud_firestore: ^4.8.1
-  firebase_core: ^2.14.0
   syncfusion_flutter_charts: ^21.2.10
+  flutter_easyloading: ^3.0.5
 
 dev_dependencies:
   flutter_test:
