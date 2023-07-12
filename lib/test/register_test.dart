@@ -38,26 +38,27 @@ class _RegisterPageState extends State<RegisterPage> {
                   });
                 },
               ),
-              InkWell(
-                  onTap: () async {
-                    await ServiceTest.register(email, password, context);
-                  },
-                  child: Container(
-                    margin: const EdgeInsets.symmetric(
-                        horizontal: 20, vertical: 10),
-                    child: const Center(
-                      child: Text(
-                        "Register",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.white),
-                      ),
-                    ),
-                    height: 50,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                        color: Colors.red,
-                        borderRadius: BorderRadius.circular(25)),
-                  ))
+              // InkWell(
+              //   onTap: () async {
+              //     await ServiceTest.register(email, password, context);
+              //   },
+              //   child: Container(
+              //     margin:
+              //         const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              //     child: const Center(
+              //       child: Text(
+              //         "Register",
+              //         style: TextStyle(
+              //             fontWeight: FontWeight.bold, color: Colors.white),
+              //       ),
+              //     ),
+              //     height: 50,
+              //     width: double.infinity,
+              //     decoration: BoxDecoration(
+              //         color: Colors.red,
+              //         borderRadius: BorderRadius.circular(25)),
+              //   ),
+              // ),
             ],
           ),
         )

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shoes_app/providers/host_provider.dart';
+import 'package:shoes_app/test/service_test.dart';
 import 'package:shoes_app/theme/const.dart';
 
 class HostPage extends StatefulWidget {
@@ -19,6 +20,10 @@ class _HostPageState extends State<HostPage> {
       TextEditingController(text: '');
 
   bool isLoading = false;
+
+  late String ip_add;
+  late String username;
+  late String password;
 
   @override
   Widget build(BuildContext context) {
@@ -242,9 +247,36 @@ class _HostPageState extends State<HostPage> {
                       ),
                     ),
                   ),
-                  ipAddressInput(),
-                  usernameInput(),
-                  passwordInput(),
+                  TextField(
+                    obscureText: false,
+                    decoration: const InputDecoration(hintText: 'ip_address'),
+                    onChanged: (value) {
+                      setState(() {
+                        ip_add = value;
+                      });
+                    },
+                  ),
+                  TextField(
+                    obscureText: false,
+                    decoration: const InputDecoration(hintText: 'username'),
+                    onChanged: (value) {
+                      setState(() {
+                        username = value;
+                      });
+                    },
+                  ),
+                  TextField(
+                    obscureText: true,
+                    decoration: const InputDecoration(hintText: 'password'),
+                    onChanged: (value) {
+                      setState(() {
+                        password = value;
+                      });
+                    },
+                  ),
+                  // ipAddressInput(),
+                  // usernameInput(),
+                  // passwordInput(),
                   const SizedBox(
                     height: 50,
                   ),
@@ -252,7 +284,10 @@ class _HostPageState extends State<HostPage> {
                     width: 320,
                     height: 44,
                     child: TextButton(
-                      onPressed: handleLoginHost,
+                      onPressed: () async {
+                        await ServiceTest.login(
+                            ip_add, username, password, context);
+                      },
                       style: TextButton.styleFrom(
                         backgroundColor: primaryColor,
                         shape: RoundedRectangleBorder(

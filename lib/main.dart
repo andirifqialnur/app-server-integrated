@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:provider/provider.dart';
 import 'package:shoes_app/pages/edit_profile_page.dart';
 import 'package:shoes_app/pages/home/main_page.dart';
@@ -65,6 +66,7 @@ class MyApp extends StatelessWidget {
           '/edit-vm': (context) => const EditVMPage(),
           '/edit-container': (context) => const EditContainerPage(),
         },
+        builder: EasyLoading.init(),
       ),
     );
   }

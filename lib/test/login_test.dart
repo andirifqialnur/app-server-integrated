@@ -10,6 +10,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  late String ip_add;
   late String email;
   late String password;
 
@@ -40,27 +41,28 @@ class _LoginPageState extends State<LoginPage> {
                 },
               ),
               InkWell(
-                  onTap: () async {
-                    print(password);
-                    print(email);
-                    await ServiceTest.login(email, password, context);
-                  },
-                  child: Container(
-                    margin: const EdgeInsets.symmetric(
-                        horizontal: 20, vertical: 10),
-                    child: const Center(
-                      child: Text(
-                        "Login",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.white),
-                      ),
+                onTap: () async {
+                  print(password);
+                  print(email);
+                  await ServiceTest.login(ip_add, email, password, context);
+                },
+                child: Container(
+                  margin:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  child: const Center(
+                    child: Text(
+                      "Login",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.white),
                     ),
-                    height: 50,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                        color: Colors.red,
-                        borderRadius: BorderRadius.circular(25)),
-                  ))
+                  ),
+                  height: 50,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.circular(25)),
+                ),
+              ),
             ],
           ),
         )

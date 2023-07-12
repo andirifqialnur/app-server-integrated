@@ -15,9 +15,9 @@ class HostService {
     var url = Uri.parse('$baseUrl/login');
     var headers = {'Content-Type': 'application/json'};
     var body = jsonEncode({
-      'ip_address': ip_add,
-      'username': username,
-      'password': password,
+      'ip_address': ip_add.toString(),
+      'username': username.toString(),
+      'password': password.toString(),
     });
 
     var response = await http.post(
